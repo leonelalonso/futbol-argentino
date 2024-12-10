@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fútbol Argentino: El Gran Desafío</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <section id="pantalla-inicio">
+        <h1>Fútbol Argentino: <br> El Gran Desafío</h1>
+        <form id="form-inicio">
+            <input type="text" id="nombre-usuario" placeholder="Ingresa tu nombre" required>
+            <button type="submit">Comenzar</button>
+        </form>
+    </section>
+
+    <!-- Pantalla de Menú -->
+    <section id="pantalla-menu" style="display: none;">
+        <h1>Bienvenido, <span id="nombre-jugador"></span></h1>
+        <div class="menu-opciones">
+            <button class="btn-categoria" data-categoria="clubes">Clubes</button>
+            <button class="btn-categoria" data-categoria="seleccion">Selección</button>
+            <button class="btn-categoria" data-categoria="reglamento">Reglamento</button>
+            <button class="btn-categoria" data-categoria="mix">Mix</button>
+        </div>
+    </section>
+
+    <section id="pantalla-juego" style="display: none;">
+        <h2 id="pregunta"></h2>
+        <div id="respuestas"></div>
+        <div id="informacion">
+            <span id="vidas">Vidas: 3</span> | 
+            <span id="puntaje">Puntaje: 0</span> | 
+            <span id="temporizador">20</span>
+        </div>
+    </section>
+    
+    <section id="pantalla-final" style="display: none;">
+        <p id="nivel-conocimiento">Nivel de conocimiento: </p>
+        <button onclick="reiniciarJuego()">Jugar de nuevo</button>
+    </section>
+    
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

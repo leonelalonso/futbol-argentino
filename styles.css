@@ -1,0 +1,149 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #006400; /* Verde oscuro simulando un campo de juego */
+    color: white; /* Letras blancas simulando la línea de cal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+#pantalla-juego, #pantalla-menu {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para mejor contraste */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Encabezados */
+h1, h2 {
+    color: white;
+    text-shadow: 1px 1px 5px #000;
+    text-align: center;
+}
+
+/* Pregunta */
+#pregunta {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Opciones */
+.opcion {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #006400; /* Texto verde */
+    background-color: white; /* Fondo blanco simulando cal */
+    border: 2px solid #ffffff; /* Bordes blancos */
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.opcion:hover {
+    background-color: #00ff00; /* Verde brillante al pasar el mouse */
+    color: white; /* Texto blanco */
+}
+
+/* Temporizador, puntaje y vidas */
+#temporizador, #puntaje, #vidas {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Feedback de respuesta */
+#respuesta-feedback {
+    margin-top: 15px;
+    padding: 10px;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    border-radius: 5px;
+    text-shadow: 1px 1px 5px #000;
+}
+
+/* Botón de reinicio */
+#btnReiniciar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #006400;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btnReiniciar:hover {
+    background-color: white;
+    color: #006400;
+}
+
+/* Botones en pantalla final */
+#btnVolverJugar, #btnSalir {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #006400;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btnVolverJugar:hover, #btnSalir:hover {
+    background-color: white;
+    color: #006400;
+}
+
+/* Estilo para el botón seleccionado */
+.opcion.seleccionado {
+    background-color: #4CAF50; /* Verde como indicación */
+    color: white;
+    border: 2px solid white;
+}
+
+/* Estilo para los botones deshabilitados */
+.opcion.deshabilitado {
+    background-color: #ccc; /* Color gris */
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none; /* Asegura que no puedan seleccionarse */
+}
+
+#btn-pausa {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#btn-pausa:hover {
+    background-color: #ffaa00;
+}
